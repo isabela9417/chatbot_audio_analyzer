@@ -1,11 +1,11 @@
 from dotenv import load_dotenv
 import streamlit as st
 import os
-from openai import import OpenAI
+from openai import OpenAI
 
 load_dotenv()
 MODEL = 'gpt-4o'
-client = OpenAI(api_key=os.getenv('openai key = sk-proj-7ZutYe4BtEydXRvY2NO2T3BlbkFJugnHv5sHcraW6Np8Vyk8'))
+client = OpenAI(api_key=os.getenv('sk-proj-7ZutYe4BtEydXRvY2NO2T3BlbkFJugnHv5sHcraW6Np8Vyk8'))
 
 st.title('AI AUDIO ANALYZER')
 audio_format = ['mp3', 'wav', 'm4a']
@@ -28,4 +28,4 @@ if audio_file:
             ],
             temperature=0,
         )
-    st.markdown(response.choices[0.message.content])
+    st.markdown(response.choices[0].message.content)
