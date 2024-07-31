@@ -5,7 +5,7 @@ from openai import OpenAI
 
 load_dotenv()
 MODEL = 'gpt-4o'
-client = OpenAI(api_key=os.getenv('sk-proj-7ZutYe4BtEydXRvY2NO2T3BlbkFJugnHv5sHcraW6Np8Vyk8'))
+client = OpenAI(api_key=os.getenv('sk-proj-fY2tHFDggRSwXeLCcJpgT3BlbkFJoVJ3BIxYyK0jXUIG3hrQ'))
 
 st.title('AI AUDIO ANALYZER')
 audio_format = ['mp3', 'wav', 'm4a']
